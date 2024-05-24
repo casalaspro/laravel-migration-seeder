@@ -15,7 +15,7 @@ return new class extends Migration
     -Definizione tipo di dato:
     Azienda (company - varchar 60)
     Stazione di partenza (departure_station - varchar 80)
-    Stazione di arrivo  (arrival-station - varchar 80)
+    Stazione di arrivo  (arrival_station - varchar 80)
     Orario di partenza (departure_time TIME)
     Orario di arrivo    (arrival_time TIME)
     Codice Treno (IL CODICE DI IDENTIFICAZIONE DEI TRENI, INTERNAZIONALE È IL NEV ED È DI 12 CIFRE - train_code BIGINT)
@@ -29,8 +29,17 @@ return new class extends Migration
     {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
+            $table->string('company', 60);
+            $table->string('departure_station', 80);
+            $table->string('arrival_station', 80);
+            $table->time('departure_time');
+            $table->time('arrival_time');
+            $table->bigInteger('train_code');
+            $table->tinyInteger('carriages_number');
+            $table->boolean('on_time');
+            $table->boolean('cancelled');
             $table->timestamps();
-            $table->
+
         });
     }
 
