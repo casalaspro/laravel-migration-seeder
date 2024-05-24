@@ -36,8 +36,8 @@ return new class extends Migration
             $table->time('arrival_time');
             $table->bigInteger('train_code');
             $table->tinyInteger('carriages_number');
-            $table->boolean('on_time');
-            $table->boolean('cancelled');
+            $table->boolean('on_time')->default(true);;
+            $table->boolean('cancelled')->default(false);;
             $table->timestamps();
 
         });
