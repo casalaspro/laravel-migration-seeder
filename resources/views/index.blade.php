@@ -34,6 +34,16 @@
       </div>
     </div>
   </div>
+
+  {{-- @php
+
+    use Carbon\Carbon;
+    $current = Carbon::today()->toDateString();
+    
+      
+  @endphp --}}
+
+  <h2>{{ $current }}</h2>
   
 </body>
 </html>
