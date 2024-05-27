@@ -44,6 +44,14 @@
   @endphp --}}
 
   {{-- <h2>{{ $current }}</h2> --}}
+
+  @php
+  // use Faker\Generator as Faker;
+
+      $faker = new Faker\Generator;
+      $faker->addProvider(new Faker\Provider\it_IT\Person($faker));
+  @endphp
+  <h1>pino{{ $faker->addProvider(new Faker\Provider\it_IT\Person($faker)) }}</h1>
   
 </body>
 </html>
