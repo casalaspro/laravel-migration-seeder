@@ -43,7 +43,7 @@
       
   @endphp --}}
 
-  <h2>{{ $current }}</h2>
+  {{-- <h2>{{ $current }}</h2> --}}
   
 </body>
 </html>

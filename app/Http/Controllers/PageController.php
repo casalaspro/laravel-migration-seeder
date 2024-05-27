@@ -12,7 +12,7 @@ class PageController extends Controller
             $currentDay = Carbon::today()->toDateString();
 
             $trains = Train::all()
-            ->where('departure_day', '=', $currentDay );
+            ->where('departure_day', '>=', $currentDay );
       
             return view('index', compact('trains') );
             // compact('trains')
